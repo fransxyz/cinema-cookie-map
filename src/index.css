@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.scanlines::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.1) 2px, rgba(0,0,0,0.1) 4px);
+  pointer-events: none;
+  z-index: 10;
+  opacity: 0.3;
+}
+
+.text-glow-red { text-shadow: 0 0 20px rgba(255,0,60,0.6); }
+.text-glow-cyan { text-shadow: 0 0 10px rgba(0,240,255,0.4); }
+.text-glow-green { text-shadow: 0 0 10px rgba(0,255,157,0.4); }
+
+.country-path {
+  fill: rgba(14, 58, 88, 0.15);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.country-path:hover {
+  fill: rgba(255, 0, 60, 0.3);
+  filter: brightness(1.5);
+}
+
+* { box-sizing: border-box; }
